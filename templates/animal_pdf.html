@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal PDF</title>
+</head>
+<body>
+    <h2>Animal Information</h2>
+    <p><strong>Name:</strong> {{ animal.name }}</p>
+    <p><strong>Species:</strong> {{ animal.species }}</p>
+
+    <h3>Visits</h3>
+    <ul>
+        {% for visit in visits %}
+            <li>{{ visit.date }} - {{ visit.reason }}</li>
+        {% empty %}
+            <li>No visits found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
